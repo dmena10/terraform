@@ -7,7 +7,7 @@ resource "aws_vpc" "vpc" {
 }
 
 resource "aws_subnet" "subnet" {
-  vpc_id     = aws_vpc.subnet.id
+  vpc_id     = aws_vpc.vpc.id
   cidr_block = "10.0.1.0/24"
 
   tags = {
@@ -16,7 +16,7 @@ resource "aws_subnet" "subnet" {
 }
 
 resource "aws_internet_gateway" "gateway" {
-  vpc_id = aws_vpc.gateway.id
+  vpc_id = aws_vpc.vpc.id
 
   tags = {
     Name = "gateway-terraform"
