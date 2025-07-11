@@ -45,7 +45,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
 
   admin_ssh_key {
     username   = "terrafrom"
-    public_key = file("~/.ssh/id_rsa.pub")
+    public_key = file("./azure-key.pub")
   }
 
   os_disk {
