@@ -1,4 +1,4 @@
-output "subnet" {
+output "name" {
   description = "The ID of the created subnet."
   value       = azurerm_subnet.subnet.id
 }
