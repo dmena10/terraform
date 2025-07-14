@@ -40,7 +40,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
   size                = "Standard_B1s"
   admin_username      = "terrafrom"
   network_interface_ids = [
-    azurerm_network_interface.network_interface.id,
+    azurerm_network_interface.network_interface.id
   ]
 
   admin_ssh_key {
